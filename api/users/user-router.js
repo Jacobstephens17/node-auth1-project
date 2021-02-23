@@ -13,7 +13,7 @@ const restricted = (req,res,next) => {
 
 
 router.get('/', restricted,(req,res) => {
-    Users.get('users')
+    Users.find('users')
         .then((users) => {
             res.status(200).json(users)
         })
